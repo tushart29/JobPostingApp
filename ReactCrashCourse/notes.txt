@@ -1,0 +1,90 @@
+- React router for multi page apps
+- React 19 adds compiler to convert react code into js to enhance performance like swelt 
+- Builds user interface, dynamic apps
+
+
+Components
+- Reusable code to build elements on page
+- breaks large components into smaller elements
+- componets can pass in props and hold state
+    -  basically pass attributes to other components 
+- basically like custom htlm elements 
+
+state
+- data a component manager internally
+- can change overtime
+- data: input data, UI related data like if modal is closed or not
+- global state: relates to the app as a whole and not a single component 
+
+Hooks
+- allows us to use state and othe features within functional components without writing a class
+- lifecyle methods: ran during specfic times during the component rendering process 
+- useState, useEffect, useRef, useReducer
+- setState, data fectching
+- 2 main are useeffect and useState
+
+JSX
+- html style syntax with js combined
+- dynamic
+- can only return 1 element. everything should be wrapped in 1 single element
+- if you dont want a div, just do <> <> <- this is called a fragment 
+- can write regular JS above Return statement and use that in the return section statmements 
+- when you create a list and trying to map in return statement, you need an ID for each element in list
+- if statements has to be 1 liners
+- {isLoggedIn ? <h1> Hello </h1> : <h1> No logged in <h1>} if logged in do this else do that
+
+
+
+SPA, SSR, SSG
+- single paged application: load a single html and js loads the entire UI into browser . page load times and SCOs are possible since coming from JS. can deploy anywhere
+- server side rendering: server sends fully rendered page to client . can fetch data and load it as well. wrapper around JS. inittial page load is rendered on server good for sco and initial page load time. need server to dpeloy like netfliy or vercel
+- static site generation: generates static htll files at build times which are very fast
+
+Vite is 
+- a superfast frontend tool kit that can be used for all frontend projects  built on top of ESBuilder, fast JS bundler
+- configurations for your dev server - vite.config.js
+- react.dev has all documentation 
+
+index.html 
+- loads in browser and everything loads through js
+- div tag has id of root then goes to main.JSX- reactRom lets us work with document object model or browser
+- then we seelect that ID root and we render that component 
+
+
+- strict mode checks potential problems like unsafe life cycle methods , legeacy api usage...
+
+- Component state: single component like app, hero
+- App or global state: relates to the whole app and can pass down to components
+
+library: cannot add separte pages
+react router: a separate package to add more packages
+
+a tag does a complete page refresh 
+
+json server lets you create a mock api
+
+
+useEffect 
+- make a request inside this- allows components to have side effets which we want when the component renders
+- then we want to put in use state
+
+
+to fetch data
+- there are other ways
+- react suspense: while rendering it will fetch. provide a loading spinner as a prop to do this 
+- now we are fetching on redering - base way to fetch from client rendering
+- react query
+
+
+- data loader from react router
+- create func from this file and then can export this func to pass in other components 
+- can get the data from that function and use it somewhere
+
+to get data from form, common way is to have a state for each data.
+
+can pass function from parent to child and child to parent . look at addjobpage and app.jsx 
+
+takes time to delete refresh after delete and reload page when you update again 
+
+npm run dev
+npm run server 
